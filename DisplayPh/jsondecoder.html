@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>untitled</title>
+	<meta name="author" content="Nigel Crawley">
+	<!-- Date: 2015-4-13 -->
+	<script type="text/javascript" charset="utf-8">
+		function updateDisplay(jsonData)
+		{
+			if (jsonData[0].category == null) return "error"; // if Aquagarden API returns error JSON abort script
+            
+            var myTime = jsonData[0].time.split("+")[0];
+
+			var myData = myTime + "," + jsonData[0].value;
+
+			return myData; // let objective-C know everything went ok
+		}
+	</script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="parserWebView" destination="roG-qM-Fdx" id="acD-nK-XBV"/>
+                <outlet property="statusMenu" destination="hnR-O8-dHi" id="Sfu-1B-gUT"/>
+                <outlet property="webView" destination="Ist-eL-adz" id="Z15-Z3-Wht"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <webView id="Ist-eL-adz">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                <nil key="identifier"/>
+            </webPreferences>
+            <connections>
+                <outlet property="frameLoadDelegate" destination="Voe-Tx-rLC" id="mCM-uR-RHY"/>
+            </connections>
+            <point key="canvasLocation" x="274" y="178"/>
+        </webView>
+        <webView id="roG-qM-Fdx">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                <nil key="identifier"/>
+            </webPreferences>
+            <point key="canvasLocation" x="275" y="431"/>
+        </webView>
+        <menu id="hnR-O8-dHi">
+            <items>
+                <menuItem title="Update now" id="AqF-8j-HGe">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="callUpdate:" target="Voe-Tx-rLC" id="Kfc-Lg-muO"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Visit Dashboard on the Web" id="4pG-bL-EOK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openUrl:" target="Voe-Tx-rLC" id="JcH-n6-pvX"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="gNU-WB-WNt"/>
+                <menuItem title="Quit DisplayPh" id="DsB-qY-1vq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-1" id="XgZ-Dz-pxC"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="287" y="633.5"/>
+        </menu>
+    </objects>
+</document>
